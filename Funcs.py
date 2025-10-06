@@ -14,7 +14,7 @@ def Img_Conv(img_source: str):
     img = cv.imread(img_source, 2)
 
     #unsure why the error is present as code works as expected may ignore if not issues arise
-    ret, bw_img = cv.threshold(img, 127, 255, cv.THRESH_BINARY) #cv.THRESH_BINARY or  to make it binary
+    ret, bw_img = cv.threshold(img, 127, 255, cv.THRESH_BINARY_INV) #cv.THRESH_BINARY or  to make it binary
 
 
 
