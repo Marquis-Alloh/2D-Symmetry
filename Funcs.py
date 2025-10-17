@@ -19,7 +19,6 @@ def Img_Conv(img_source: str):
     cv.imshow("Binary", bw_img)
     cv.waitKey(0)
     cv.destroyAllWindows()
-    name = str(input("provide a name for the image"))
     save_img(bw_img) # Save the image
 
 def save_img(img):
