@@ -16,13 +16,11 @@ def Img_Conv(img_source: str):
     #unsure why the error is present as code works as expected may ignore if not issues arise
     ret, bw_img = cv.threshold(img, 127, 255, cv.THRESH_BINARY_INV) #cv.THRESH_BINARY or  to make it binary
 
-
-
     cv.imshow("Binary", bw_img)
     cv.waitKey(0)
     cv.destroyAllWindows()
-    #name = str(input("provide a name for the image"))
-    #save_img(bw_img) # Save the image
+    name = str(input("provide a name for the image"))
+    save_img(bw_img) # Save the image
 
 def save_img(img):
     """
@@ -34,7 +32,7 @@ def save_img(img):
     
     choice = str(input('Do you want it to be saved in the "Raw" or the "Converted" folders?'))
 
-    if choice != "RAW" or choice != "Converted":
+    if choice != "Raw" or choice != "Converted":
         print("This is not the expected format, please try to type the names 'Raw' or 'Converted' exactly. Case sensitive!")
         return 0
     
